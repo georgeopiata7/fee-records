@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Student</title>
+</head>
+<body>
+    <h2>Record Student Fee</h2>
+    <form action="/record" method="POST">
+        <label for="">Student Name: </label>
+        <input type="text" name="student_name" placeholder="Enter Name" required>
+        <br><br>
+
+        <label for="">Admission Number: </label>
+        <input type="number" name="admission_number" placeholder="Enter Admission-Number" required>
+
+        <br><br>
+
+        <label for=""> Total Fees: </label>
+        <input type="number" step="0.01" name="total_fees" placeholder="Enter Total Fees" required>
+        <br><br>
+
+        <label for="">Amount Paid: </label>
+        <input type="number" step="0.01" name="amount_paid" placeholder="Enter amount paid" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+
+
+
+    
+
+        
+
+    </form>
+    
+</body>
+</html>

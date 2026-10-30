@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Fee</title>
+</head>
+<body>
+    <h2>Students Fees Records</h2>
+
+    <table>
+        <tr>
+            <td>id</td>
+            <td>Student Name</td>
+            <td>Admission Number</td>
+            <td>Total fees (Ksh.)</td>
+            <td>Amount Paid (Ksh.)</td>
+            <td>Balance (Ksh.)</td>
+        </tr>
+        {% for student in students_fee %}
+
+        <tr>
+            <td>{{student[0]}}</td>
+            <td>{{student[1]}}</td>
+            <td>{{student[2]}}</td>
+            <td>{{student[3]}}</td>
+            <td>{{student[4]}}</td>
+            <td>{{student[5]}}</td>
+            
+
+        </tr>
+        {% endfor %}
+    </table>
+
+    
+</body>
+</html>

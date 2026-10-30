@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+
+    <style>
+        
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 23px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login-container">    
+    <h1>Login Page</h1>
+    <p>Welcome</p>
+
+    <form action="/login" method="POST">
+
+        <label for="">Email Address</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label for="">Password</label>
+        <input type="password" name="password" placeholder="password" required>
+
+        <button type="Submit">Login</button>
+        
+    </form>
+
+
+    </div>
+
+    
+</html>

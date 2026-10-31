@@ -4,37 +4,140 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Record Student</title>
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #14532d;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #15803d;
+    box-shadow: 0 0 5px rgba(21, 128, 61, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #14532d;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #166534;
+}
+.page-title{
+    text-align: center;
+    color: #14532d;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.form-container {
+    background-color: white;
+    width: 100%;
+    max-width: 480px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin: 0 auto;
+}
+
+
+    </style>
 </head>
 <body>
-    <h2>Record Student Fee</h2>
-    <form action="/record" method="POST">
-        <label for="">Student Name: </label>
-        <input type="text" name="student_name" placeholder="Enter Name" required>
-        <br><br>
-
-        <label for="">Admission Number: </label>
-        <input type="number" name="admission_number" placeholder="Enter Admission-Number" required>
-
-        <br><br>
-
-        <label for=""> Total Fees: </label>
-        <input type="number" step="0.01" name="total_fees" placeholder="Enter Total Fees" required>
-        <br><br>
-
-        <label for="">Amount Paid: </label>
-        <input type="number" step="0.01" name="amount_paid" placeholder="Enter amount paid" required>
-        <br><br>
-
-        <button type="submit">Submit</button>
-
-
-
-
     
+    <div class="form-container">
+        <h2 class="page-title">Record Student Fee</h2>
+        <p class="subtitle">Enter Students Details and Fee Payment Information</p>
+        <form action="/record" method="POST">
+            <label for="">Student Name: </label>
+            <input type="text" name="student_name" placeholder="Enter Name" required>
+            <br><br>
+
+            <label for="">Admission Number: </label>
+            <input type="number" name="admission_number" placeholder="Enter Admission-Number" required>
+
+            <br><br>
+
+            <label for=""> Total Fees: </label>
+            <input type="number" step="0.01" name="total_fees" placeholder="Enter Total Fees" required>
+            <br><br>
+
+            <label for="">Amount Paid: </label>
+            <input type="number" step="0.01" name="amount_paid" placeholder="Enter amount paid" required>
+            <br><br>
+
+            <button type="submit">Submit</button>
+
+
+
 
         
 
-    </form>
+            
+
+        </form>
+    </div>
     
 </body>
 </html>

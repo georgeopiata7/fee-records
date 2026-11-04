@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursar Login</title>
+
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #14532d;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #15803d;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #14532d;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #166534;
+}
+
+.payment-button {
+    display: block;
+    text-align: center;
+    background-color: #15803d;
+    color: white;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    
+    
+}
+
+.payment-button:hover {
+    background-color: #166534;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Bursar Login</h2>
+        <p class="subtitle">Sign in to access the School Fee Record System</p>
+
+        <form action="/bursar_login" method="POST">
+            <label for="">Username: </label>
+            <input type="text" name="username" placeholder="Username" required>
+            <br><br>
+
+            <label for="">Email: </label>
+            <input type="email" name="email" placeholder="Enter email" required>
+            <br><br>
+
+            <label for="">Password: </label>
+            <input type="password" name="password" placeholder="Enter password" required>
+            <br><br>
+
+            <label for="">Role: </label>
+            <input type="text" name="role" placeholder="Enter your role" required>
+
+            <button type="submit">Login</button>
+
+            <div class="payment_button">
+                <a href="{{url_for('make_payment')}}" class="payment_button">
+                    Make Payment
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>

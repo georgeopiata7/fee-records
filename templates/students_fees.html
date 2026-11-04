@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students Fee</title>
@@ -85,19 +86,66 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
+/* Search form */
+form {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Search input */
+input[type="text"] {
+    width: 300px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Input when clicked */
+input[type="text"]:focus {
+    border-color: #14532d;
+    box-shadow: 0 0 5px rgba(20, 83, 45, 0.3);
+}
+
+/* Search button */
+form button {
+    background-color: #14532d;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Button hover */
+form button:hover {
+    background-color: #166534;
+}
+
     </style>
 </head>
 <body>
+
+
+
     <h2>Students Fees Records</h2>
+
+    <form method="POST" action="{{url_for('search_student')}}">
+        <input type="text" name="search" placeholder="Enter student's name..." >
+        <button type="submit">Search</button>
+    </form>
 
     <table>
         <tr>
-            <td>id</td>
-            <td>Student Name</td>
-            <td>Admission Number</td>
-            <td>Total fees (Ksh.)</td>
-            <td>Amount Paid (Ksh.)</td>
-            <td>Balance (Ksh.)</td>
+            <th>id</th>
+            <th>Student Name</th>
+            <th>Admission Number</th>
+            <th>Total fees (Ksh.)</th>
+            <th>Amount Paid (Ksh.)</th>
+            <th>Balance (Ksh.)</th>
         </tr>
         {% for student in students_fee %}
 

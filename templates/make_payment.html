@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment</title>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #a4b9b2;
+        margin: 0;
+        padding: 30px;
+    }
+
+    .payment-container {
+        background: white;
+        max-width: 450px;
+        margin: 40px auto;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #14532d;
+        text-align: center;
+    }
+
+    p {
+        color: #666;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 7px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #14532d;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 25px;
+        padding: 13px;
+        background-color: #15803d;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #166534;
+    }
+</style>
+</head>
+<body>
+
+    
+    
+    <div class="payment-container">
+        <h2>School Fee Payment</h2>
+        <p>Enter Student's details to make payment</p>
+
+
+        <form action="{{url_for('make_payment')}}" method="POST">
+
+
+            <label for="">Student's Admission Number</label>
+            <input type="number" name="admission_number" placeholder="Enter Student's Admission Number..." required>
+            <br><br>
+
+            <label for="">Enter Amount to pay (Ksh.)</label>
+            <input type="number" name="amount" placeholder="Enter Amount..." min="1" step="0.01" required>
+            <br><br>
+
+            <label for="">M-Pesa Phone Number</label>
+            <input type="Tel" name="phone" placeholder="0707688964" pattern="(07|01)[0-9]{8}$" required>
+            <br><br>
+
+            <button>Proceed to Pay</button>
+
+            
+
+        
+        </form>
+
+        {%if student %}
+
+            <h3>Student Found</h3>
+            <p>Student Name: {{student[1]}}</p>
+            <p>Admission Number: {{student[2]}}</p>
+            <p>Total Fees: {{student[3]}}</p>
+            <p>Amount Paid: Ksh. {{student[4]}}</p>
+            <p>Outstanding Balance: Ksh. {{student[5]}}</p>
+
+        {% endif %}
+
+        {% if message %}
+            <p>{{message}}</p>
+        
+        {% endif %}
+
+    </div>
+
+
+    
+    
+</body>
+</html>

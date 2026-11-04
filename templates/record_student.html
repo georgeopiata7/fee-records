@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Record Student</title>
@@ -79,6 +80,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 30px;
 }
 
 button:hover {
@@ -137,6 +139,14 @@ button:hover {
             
 
         </form>
+
+        <div class="view_students">
+            <a href="{{ url_for('view_students')}}">
+                <button>View All Students</button>
+            </a>
+        </div>
+
+
     </div>
     
 </body>
